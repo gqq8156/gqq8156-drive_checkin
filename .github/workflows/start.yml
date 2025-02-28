@@ -4,12 +4,12 @@ name: Action
 on:
   workflow_dispatch:
   schedule:
-    - cron: 20 20 13 * *
+    - cron: 40 19 * * *
 
 
 jobs:
     build:
-      runs-on: ubuntu-20.04
+      runs-on: ubuntu-22.04
 
       steps:
         - name: 更改交换空间并link构建空间
@@ -37,7 +37,7 @@ jobs:
         - name: 执行
           uses: nick-fields/retry@master
           with:
-            timeout_minutes: 30
-            max_attempts: 3
+            timeout_minutes: 90
+            max_attempts: 2
             command: npm start
               
