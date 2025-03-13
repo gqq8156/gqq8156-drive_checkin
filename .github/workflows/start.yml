@@ -3,7 +3,7 @@ name: Action
 on:
   workflow_dispatch:
     schedule:
-      - cron: 30 17 * * *
+      - cron: 50 17 * * *
 
     inputs:
       ssh:
