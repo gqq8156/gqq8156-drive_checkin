@@ -257,7 +257,7 @@ const main = async () => {
     logger.log("\n\n");
     const events = recording.replay();
     const content = events.map((e) => `${e.data.join("")}`).join("  \n");
-    push("2350-1天翼自动签到git", content);
+    push("2350-2天翼自动签到git", content);
     recording.erase();
   }
 })();
