@@ -1,16 +1,18 @@
 name: Action
 
 on:
+  # 手动触发
   workflow_dispatch:
-    schedule:
-      - cron: 50 17 * * *
-
     inputs:
       ssh:
         description: "ssh"
         required: true
         default: "false"
         type: boolean
+
+  # 定时触发
+  schedule:
+    - cron: '0 0 * * *'  # 每天 18:50 执行
 
 jobs:
   build:
